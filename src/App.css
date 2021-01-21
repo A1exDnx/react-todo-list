@@ -1,38 +1,79 @@
-.App {
-  text-align: center;
+.checked {
+  text-decoration: line-through;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+input, span, button {
+  font-family: 'Montserrat';
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+button {
+  padding:10px;
+  background-color:rgb(92, 71, 211);
+  color:white;
+  border-radius:6px;
+  border:unset;
+  font-size:16px;
+  font-weight:300;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+input {
+  padding:10px 14px;
+  background-color:rgba(92, 71, 211, 0.062);
+  border: 1px solid rgb(92, 71, 211);
+  border-radius:6px;
+}
+
+input::placeholder {
+  color:rgb(160, 160, 160);
+}
+
+input:focus {
+  outline:unset;
+}
+
+.todo {
   display: flex;
   flex-direction: column;
+  justify-content:center;
+  align-items:center;
+  height:90vh;
+}
+
+.title-task {
+  min-width:200px;
+  margin-left:10px;
+  margin-right:10px;
+}
+
+.task-box {
+  margin-bottom:20px;
+}
+
+.task {
+  margin-bottom:10px;
+  display: flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.task > button {
+  background-color: unset;
+  padding:unset;
+  border-radius: unset;
+  color:rgba(106, 91, 189, 0.678);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+form {
+  display:flex;
+  justify-content: space-between;
+  width:300px;
+  flex-wrap: wrap;
+}
+
+form > input, form > button {
+  margin-bottom:10px;
+}
+
+input:checked {
+  background-color: #9f21f3;
 }
